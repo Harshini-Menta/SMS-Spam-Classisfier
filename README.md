@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 4. Run the main script 'app.py':
 ```
-python spam_detection.py
+python app.py
 ```
 
 5. The script will perform the following steps:
