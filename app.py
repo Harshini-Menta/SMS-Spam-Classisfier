@@ -7,7 +7,7 @@ with open("./src/classifier.pkl","rb") as f:
     classifier = pickle.load(f)
 
 with open("./src/vectorizer.pkl","rb") as f:
-    vecotrizer = pickle.load(f)
+    vectorizer = pickle.load(f)
 
 nltk.download("punkt")
 nltk.download("stopwords")
@@ -32,7 +32,7 @@ with col1:
             pass
         else:
             message = tp.textPreprocessor(message)
-            message = vecotrizer.transform([message]).toarray()
+            message = vectorizer.transform([message]).toarray()
             result = classifier.predict(message)[0]
             if result == 0:
                 st.header("Not spam")
